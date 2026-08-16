@@ -41,7 +41,7 @@
 
 ## 5. 后续建议
 
-1. **对象仓库（qtcloud-auth）**：按 P0（A-01/A-02/A-04/A-05 配置守卫 + 限流）→ P1（A-03/A-06/A-07/A-08）→ P2 顺序整改；整改后按台账状态机复测；
+1. **对象仓库（qtcloud-auth）**：16 条发现已提为 GitHub issues（`#1`–`#16`，标签 `poc-002` + `security:*`，https://github.com/quanttide/qtcloud-auth/issues），处理人已分配 **@LiXiang050789**。按 P0（A-01/A-02/A-04/A-05 配置守卫 + 限流、D-01 工具链）→ P1（A-03/A-06/A-07/A-08）→ P2 顺序整改；issue 关闭即台账状态机「复测中 → 已关闭」的触发点（D-02、A-15 已接受项未提 issue）；
 2. **跨仓库协同**：qtcloud-auth 的 RS256 签发（A-13）与 qtcloud-secret 的 RS256 验签需同步落地，避免长期不对称；
 3. **实验室**：PoC 模板已稳定，可并行推进第三个对象（qtcloud-devops 供应链面 或 qtcloud-pay 支付面）。
 
