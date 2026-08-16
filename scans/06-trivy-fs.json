@@ -1,0 +1,616 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.74.0"
+  },
+  "ReportID": "01a008f0-f49c-7476-a071-f81e03fe9725",
+  "CreatedAt": "2026-08-16T13:00:04.124293225+08:00",
+  "ArtifactID": "sha256:c8172bb8c5d94f35b8d6c7a428c2b2109eb89a6ebba53a89c2c705c0c015cc14",
+  "ArtifactName": "/home/iguo/repos/quanttide/domains/quanttide-secret/apps/qtcloud-secret",
+  "ArtifactType": "repository",
+  "Metadata": {
+    "RepoURL": "https://github.com/quanttide/qtcloud-secret.git",
+    "Branch": "main",
+    "Commit": "cec77015efea197ac3665e868c2da60101da7276",
+    "CommitMsg": "docs(security): R1/R2 落地状态更新",
+    "Author": "Guo Zhang \u003czhangguo@quanttide.com\u003e",
+    "Committer": "Guo Zhang \u003czhangguo@quanttide.com\u003e"
+  },
+  "Results": [
+    {
+      "Target": ".gocache/mod/github.com/golang-jwt/jwt/v5@v5.2.1/go.mod",
+      "Class": "lang-pkgs",
+      "Type": "gomod",
+      "Packages": [
+        {
+          "ID": "github.com/golang-jwt/jwt/v5",
+          "Name": "github.com/golang-jwt/jwt/v5",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/golang-jwt/jwt/v5",
+            "UID": "b0556f024fd5844a"
+          },
+          "Relationship": "root",
+          "AnalyzedBy": "gomod"
+        }
+      ]
+    },
+    {
+      "Target": ".gocache/mod/golang.org/x/time@v0.15.0/go.mod",
+      "Class": "lang-pkgs",
+      "Type": "gomod",
+      "Packages": [
+        {
+          "ID": "golang.org/x/time",
+          "Name": "golang.org/x/time",
+          "Identifier": {
+            "PURL": "pkg:golang/golang.org/x/time",
+            "UID": "c30d4dfefc18a9ac"
+          },
+          "Relationship": "root",
+          "AnalyzedBy": "gomod"
+        }
+      ]
+    },
+    {
+      "Target": "src/provider/go.mod",
+      "Class": "lang-pkgs",
+      "Type": "gomod",
+      "Packages": [
+        {
+          "ID": "github.com/quanttide/quanttide-secret/provider",
+          "Name": "github.com/quanttide/quanttide-secret/provider",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/quanttide/quanttide-secret/provider",
+            "UID": "d75e4e2a73f5b06c"
+          },
+          "Relationship": "root",
+          "DependsOn": [
+            "github.com/aliyun/aliyun-oss-go-sdk@v2.2.9+incompatible",
+            "github.com/golang-jwt/jwt/v5@v5.2.1",
+            "golang.org/x/time@v0.15.0",
+            "gopkg.in/check.v1@v1.0.0-20201130134442-10cb98267c6c"
+          ],
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/aliyun/aliyun-oss-go-sdk@v2.2.9+incompatible",
+          "Name": "github.com/aliyun/aliyun-oss-go-sdk",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/aliyun/aliyun-oss-go-sdk@v2.2.9%2Bincompatible",
+            "UID": "a229c1f3cf1d4bf0"
+          },
+          "Version": "v2.2.9+incompatible",
+          "Relationship": "direct",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/golang-jwt/jwt/v5@v5.2.1",
+          "Name": "github.com/golang-jwt/jwt/v5",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/golang-jwt/jwt/v5@v5.2.1",
+            "UID": "33ae39d20d4f0037"
+          },
+          "Version": "v5.2.1",
+          "Relationship": "direct",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "golang.org/x/time@v0.15.0",
+          "Name": "golang.org/x/time",
+          "Identifier": {
+            "PURL": "pkg:golang/golang.org/x/time@v0.15.0",
+            "UID": "69bd633a7524cf4e"
+          },
+          "Version": "v0.15.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "gopkg.in/check.v1@v1.0.0-20201130134442-10cb98267c6c",
+          "Name": "gopkg.in/check.v1",
+          "Identifier": {
+            "PURL": "pkg:golang/gopkg.in/check.v1@v1.0.0-20201130134442-10cb98267c6c",
+            "UID": "882f4339c9be2fe8"
+          },
+          "Version": "v1.0.0-20201130134442-10cb98267c6c",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        }
+      ],
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2025-30204",
+          "VendorIDs": [
+            "GHSA-mh63-6h87-95cp"
+          ],
+          "PkgID": "github.com/golang-jwt/jwt/v5@v5.2.1",
+          "PkgName": "github.com/golang-jwt/jwt/v5",
+          "PkgIdentifier": {
+            "PURL": "pkg:golang/github.com/golang-jwt/jwt/v5@v5.2.1",
+            "UID": "33ae39d20d4f0037"
+          },
+          "InstalledVersion": "v5.2.1",
+          "FixedVersion": "5.2.2",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-30204",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Go",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago"
+          },
+          "Fingerprint": "sha256:312e343020973fb0fd0abb76f9f40384bc0dc60b4e1d1b0658770fdff0a9522c",
+          "Title": "golang-jwt/jwt: jwt-go allows excessive memory allocation during header parsing",
+          "Description": "golang-jwt is a Go implementation of JSON Web Tokens. Starting in version 3.2.0 and prior to versions 5.2.2 and 4.5.2, the function parse.ParseUnverified splits (via a call to strings.Split) its argument (which is untrusted data) on periods. As a result, in the face of a malicious request whose Authorization header consists of Bearer  followed by many period characters, a call to that function incurs allocations to the tune of O(n) bytes (where n stands for the length of the function's argument), with a constant factor of about 16. This issue is fixed in 5.2.2 and 4.5.2.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-405"
+          ],
+          "VendorSeverity": {
+            "alma": 3,
+            "amazon": 3,
+            "azure": 2,
+            "cbl-mariner": 2,
+            "ghsa": 3,
+            "oracle-oval": 3,
+            "redhat": 3,
+            "rocky": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V40Vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+              "V3Score": 7.5,
+              "V40Score": 8.7
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2025:3411",
+            "https://access.redhat.com/errata/RHSA-2025:7425",
+            "https://access.redhat.com/security/cve/CVE-2025-30204",
+            "https://bugzilla.redhat.com/2354195",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2354195",
+            "https://creativecommons.org/licenses/by/4.0/",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-30204",
+            "https://errata.almalinux.org/9/ALSA-2025-7425.html",
+            "https://errata.rockylinux.org/RLSA-2025:3411",
+            "https://github.com/golang-jwt/jwt",
+            "https://github.com/golang-jwt/jwt/commit/0951d184286dece21f73c85673fd308786ffe9c3",
+            "https://github.com/golang-jwt/jwt/commit/bf316c48137a1212f8d0af9288cc9ce8e59f1afb",
+            "https://github.com/golang-jwt/jwt/security/advisories/GHSA-mh63-6h87-95cp",
+            "https://linux.oracle.com/cve/CVE-2025-30204.html",
+            "https://linux.oracle.com/errata/ELSA-2025-7967.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-30204",
+            "https://pkg.go.dev/vuln/GO-2025-3553",
+            "https://security.netapp.com/advisory/ntap-20250404-0002",
+            "https://security.netapp.com/advisory/ntap-20250404-0002/",
+            "https://www.cve.org/CVERecord?id=CVE-2025-30204"
+          ],
+          "PublishedDate": "2025-03-21T22:15:26.42Z",
+          "LastModifiedDate": "2026-06-17T09:08:21.1Z"
+        }
+      ]
+    },
+    {
+      "Target": "src/studio/pubspec.lock",
+      "Class": "lang-pkgs",
+      "Type": "pub",
+      "Packages": [
+        {
+          "ID": "cupertino_icons@1.0.9",
+          "Name": "cupertino_icons",
+          "Identifier": {
+            "PURL": "pkg:pub/cupertino_icons@1.0.9",
+            "UID": "a76250d58e29661f"
+          },
+          "Version": "1.0.9",
+          "Relationship": "direct",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "flutter@0.0.0",
+          "Name": "flutter",
+          "Identifier": {
+            "PURL": "pkg:pub/flutter@0.0.0",
+            "UID": "b14c964477954db7"
+          },
+          "Version": "0.0.0",
+          "Relationship": "direct",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "flutter_lints@6.0.0",
+          "Name": "flutter_lints",
+          "Identifier": {
+            "PURL": "pkg:pub/flutter_lints@6.0.0",
+            "UID": "e312ed4469bbe5cc"
+          },
+          "Version": "6.0.0",
+          "Relationship": "direct",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "flutter_test@0.0.0",
+          "Name": "flutter_test",
+          "Identifier": {
+            "PURL": "pkg:pub/flutter_test@0.0.0",
+            "UID": "4cb064742a5d6191"
+          },
+          "Version": "0.0.0",
+          "Relationship": "direct",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "http@1.6.0",
+          "Name": "http",
+          "Identifier": {
+            "PURL": "pkg:pub/http@1.6.0",
+            "UID": "85e6e59ca204c961"
+          },
+          "Version": "1.6.0",
+          "Relationship": "direct",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "async@2.13.1",
+          "Name": "async",
+          "Identifier": {
+            "PURL": "pkg:pub/async@2.13.1",
+            "UID": "3b51cb19b7f18665"
+          },
+          "Version": "2.13.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "boolean_selector@2.1.2",
+          "Name": "boolean_selector",
+          "Identifier": {
+            "PURL": "pkg:pub/boolean_selector@2.1.2",
+            "UID": "b4bb9752228497ed"
+          },
+          "Version": "2.1.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "characters@1.4.1",
+          "Name": "characters",
+          "Identifier": {
+            "PURL": "pkg:pub/characters@1.4.1",
+            "UID": "15df7c12cfbdb52d"
+          },
+          "Version": "1.4.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "clock@1.1.2",
+          "Name": "clock",
+          "Identifier": {
+            "PURL": "pkg:pub/clock@1.1.2",
+            "UID": "5310466b8ce4be80"
+          },
+          "Version": "1.1.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "collection@1.19.1",
+          "Name": "collection",
+          "Identifier": {
+            "PURL": "pkg:pub/collection@1.19.1",
+            "UID": "5fb7702ea4cf268b"
+          },
+          "Version": "1.19.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "fake_async@1.3.3",
+          "Name": "fake_async",
+          "Identifier": {
+            "PURL": "pkg:pub/fake_async@1.3.3",
+            "UID": "14bdd5add7a3edb2"
+          },
+          "Version": "1.3.3",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "http_parser@4.1.2",
+          "Name": "http_parser",
+          "Identifier": {
+            "PURL": "pkg:pub/http_parser@4.1.2",
+            "UID": "34ed7fa715261c79"
+          },
+          "Version": "4.1.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "leak_tracker@11.0.2",
+          "Name": "leak_tracker",
+          "Identifier": {
+            "PURL": "pkg:pub/leak_tracker@11.0.2",
+            "UID": "81db893334d7f2e7"
+          },
+          "Version": "11.0.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "leak_tracker_flutter_testing@3.0.10",
+          "Name": "leak_tracker_flutter_testing",
+          "Identifier": {
+            "PURL": "pkg:pub/leak_tracker_flutter_testing@3.0.10",
+            "UID": "cb1907017e6168f9"
+          },
+          "Version": "3.0.10",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "leak_tracker_testing@3.0.2",
+          "Name": "leak_tracker_testing",
+          "Identifier": {
+            "PURL": "pkg:pub/leak_tracker_testing@3.0.2",
+            "UID": "bb6c38c20185d8eb"
+          },
+          "Version": "3.0.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "lints@6.1.0",
+          "Name": "lints",
+          "Identifier": {
+            "PURL": "pkg:pub/lints@6.1.0",
+            "UID": "1a20dea9071adade"
+          },
+          "Version": "6.1.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "matcher@0.12.19",
+          "Name": "matcher",
+          "Identifier": {
+            "PURL": "pkg:pub/matcher@0.12.19",
+            "UID": "3fc76befd455b9b"
+          },
+          "Version": "0.12.19",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "material_color_utilities@0.13.0",
+          "Name": "material_color_utilities",
+          "Identifier": {
+            "PURL": "pkg:pub/material_color_utilities@0.13.0",
+            "UID": "ae2cdab0518a300b"
+          },
+          "Version": "0.13.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "meta@1.18.0",
+          "Name": "meta",
+          "Identifier": {
+            "PURL": "pkg:pub/meta@1.18.0",
+            "UID": "aa2dcf21abf716d7"
+          },
+          "Version": "1.18.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "path@1.9.1",
+          "Name": "path",
+          "Identifier": {
+            "PURL": "pkg:pub/path@1.9.1",
+            "UID": "eb107484488aefe0"
+          },
+          "Version": "1.9.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "sky_engine@0.0.0",
+          "Name": "sky_engine",
+          "Identifier": {
+            "PURL": "pkg:pub/sky_engine@0.0.0",
+            "UID": "5af8318bb41c19a9"
+          },
+          "Version": "0.0.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "source_span@1.10.2",
+          "Name": "source_span",
+          "Identifier": {
+            "PURL": "pkg:pub/source_span@1.10.2",
+            "UID": "2fd2dd56a84c42a0"
+          },
+          "Version": "1.10.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "stack_trace@1.12.1",
+          "Name": "stack_trace",
+          "Identifier": {
+            "PURL": "pkg:pub/stack_trace@1.12.1",
+            "UID": "1a80c47ab501dec1"
+          },
+          "Version": "1.12.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "stream_channel@2.1.4",
+          "Name": "stream_channel",
+          "Identifier": {
+            "PURL": "pkg:pub/stream_channel@2.1.4",
+            "UID": "99b99363a37f0aa6"
+          },
+          "Version": "2.1.4",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "string_scanner@1.4.1",
+          "Name": "string_scanner",
+          "Identifier": {
+            "PURL": "pkg:pub/string_scanner@1.4.1",
+            "UID": "f6715a07db39c141"
+          },
+          "Version": "1.4.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "term_glyph@1.2.2",
+          "Name": "term_glyph",
+          "Identifier": {
+            "PURL": "pkg:pub/term_glyph@1.2.2",
+            "UID": "8f6905f1e6b114bf"
+          },
+          "Version": "1.2.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "test_api@0.7.11",
+          "Name": "test_api",
+          "Identifier": {
+            "PURL": "pkg:pub/test_api@0.7.11",
+            "UID": "a037410f10d45559"
+          },
+          "Version": "0.7.11",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "typed_data@1.4.0",
+          "Name": "typed_data",
+          "Identifier": {
+            "PURL": "pkg:pub/typed_data@1.4.0",
+            "UID": "7357b82708834ea3"
+          },
+          "Version": "1.4.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "vector_math@2.2.0",
+          "Name": "vector_math",
+          "Identifier": {
+            "PURL": "pkg:pub/vector_math@2.2.0",
+            "UID": "ea2ae8dc43e15977"
+          },
+          "Version": "2.2.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "vm_service@15.2.0",
+          "Name": "vm_service",
+          "Identifier": {
+            "PURL": "pkg:pub/vm_service@15.2.0",
+            "UID": "37d4e7eeb1593c8e"
+          },
+          "Version": "15.2.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        },
+        {
+          "ID": "web@1.1.1",
+          "Name": "web",
+          "Identifier": {
+            "PURL": "pkg:pub/web@1.1.1",
+            "UID": "2a9fa5d8d517e222"
+          },
+          "Version": "1.1.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pubspec-lock"
+        }
+      ]
+    },
+    {
+      "Target": "manifests/terraform",
+      "Class": "config",
+      "Type": "terraform",
+      "MisconfSummary": {
+        "Successes": 51,
+        "Failures": 0
+      }
+    },
+    {
+      "Target": "src/provider/Dockerfile",
+      "Class": "config",
+      "Type": "dockerfile",
+      "MisconfSummary": {
+        "Successes": 26,
+        "Failures": 1
+      },
+      "Misconfigurations": [
+        {
+          "Type": "Dockerfile Security Check",
+          "ID": "DS-0026",
+          "Title": "No HEALTHCHECK defined",
+          "Description": "You should add HEALTHCHECK instruction in your docker container images to perform the health check on running containers.",
+          "Message": "Add HEALTHCHECK instruction in your Dockerfile",
+          "Namespace": "builtin.dockerfile.DS026",
+          "Query": "data.builtin.dockerfile.DS026.deny",
+          "Resolution": "Add HEALTHCHECK instruction in Dockerfile",
+          "Severity": "LOW",
+          "PrimaryURL": "https://avd.aquasec.com/misconfig/ds-0026",
+          "References": [
+            "https://blog.aquasec.com/docker-security-best-practices",
+            "https://avd.aquasec.com/misconfig/ds-0026"
+          ],
+          "Status": "FAIL",
+          "CauseMetadata": {
+            "Provider": "Dockerfile",
+            "Service": "general"
+          }
+        }
+      ]
+    }
+  ]
+}

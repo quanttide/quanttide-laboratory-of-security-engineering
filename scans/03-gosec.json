@@ -1,0 +1,76 @@
+{
+	"Golang errors": {},
+	"Issues": [
+		{
+			"severity": "HIGH",
+			"confidence": "LOW",
+			"cwe": {
+				"id": "798",
+				"url": "https://cwe.mitre.org/data/definitions/798.html"
+			},
+			"rule_id": "G101",
+			"details": "Potential hardcoded credentials",
+			"file": "/home/iguo/repos/quanttide/domains/quanttide-secret/apps/qtcloud-secret/src/provider/internal/config/config.go",
+			"code": "77: \tif secret == \"\" {\n78: \t\tsecret = \"quanttide-auth-secret\"\n79: \t}\n",
+			"line": "78",
+			"column": "3",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "MEDIUM",
+			"confidence": "LOW",
+			"cwe": {
+				"id": "400",
+				"url": "https://cwe.mitre.org/data/definitions/400.html"
+			},
+			"rule_id": "G112",
+			"details": "Potential Slowloris Attack because ReadHeaderTimeout is not configured in the http.Server",
+			"file": "/home/iguo/repos/quanttide/domains/quanttide-secret/apps/qtcloud-secret/src/provider/cmd/server/main.go",
+			"code": "35: \n36: \tsrv := \u0026http.Server{\n37: \t\tAddr:    \":\" + cfg.Port,\n38: \t\tHandler: h.Routes(),\n39: \t}\n40: \tlog.Printf(\"qtcloud-secret provider 启动，监听 :%s\", cfg.Port)\n",
+			"line": "36-39",
+			"column": "10",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "MEDIUM",
+			"confidence": "MEDIUM",
+			"cwe": {
+				"id": "499",
+				"url": "https://cwe.mitre.org/data/definitions/499.html"
+			},
+			"rule_id": "G117",
+			"details": "Marshaled struct field \"Secret\" (JSON key \"secret\") matches secret pattern",
+			"file": "/home/iguo/repos/quanttide/domains/quanttide-secret/apps/qtcloud-secret/src/provider/internal/handler/secrets.go",
+			"code": "113: \t\t}\n114: \t\tdata, _ := json.Marshal(item)\n115: \t\tif _, err := w.Write(append(data, '\\n')); err != nil {\n",
+			"line": "114",
+			"column": "14",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "LOW",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "117",
+				"url": "https://cwe.mitre.org/data/definitions/117.html"
+			},
+			"rule_id": "G706",
+			"details": "Log injection via taint analysis",
+			"file": "/home/iguo/repos/quanttide/domains/quanttide-secret/apps/qtcloud-secret/src/provider/internal/handler/secrets.go",
+			"code": "307: func (h *Handler) audit(r *http.Request, action, id, result string) {\n308: \tlog.Printf(\"audit method=%s action=%s id=%s result=%s remote=%s\", r.Method, action, id, result, r.RemoteAddr)\n309: }\n",
+			"line": "308",
+			"column": "12",
+			"nosec": false,
+			"suppressions": null
+		}
+	],
+	"Stats": {
+		"files": 9,
+		"lines": 948,
+		"nosec": 0,
+		"found": 4
+	},
+	"GosecVersion": "dev"
+}

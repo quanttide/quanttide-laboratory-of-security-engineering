@@ -1,7 +1,7 @@
 # PoC 规划：漏洞管理与安全审计（对象：qtcloud-secret）
 
 > 实验室：`quanttide-laboratory-of-security-engineering`（量潮安全工程实验室）
-> 状态：**规划中**，待评审后执行
+> 状态：**已执行完成**（2026-08-16）。审计产物见 `../findings/`（漏洞台账 v1、审计报告 v1、复盘报告 v1）
 > 关联：量潮安全云首发能力域——漏洞管理、安全审计（见 `qtcloud-security` README）
 
 ## 1. 背景与目标
