@@ -1,0 +1,697 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.74.0"
+  },
+  "ReportID": "01a0092b-1b68-7dbd-84ef-c1e4416514eb",
+  "CreatedAt": "2026-08-16T14:03:35.144903159+08:00",
+  "ArtifactID": "sha256:3bdd005608f65f7226d012ef9868590026f8002a0648c440e7720e7c18a23acb",
+  "ArtifactName": "/home/iguo/repos/quanttide/domains/quanttide-auth/apps/qtcloud-auth",
+  "ArtifactType": "repository",
+  "Metadata": {
+    "RepoURL": "https://github.com/quanttide/qtcloud-auth.git",
+    "Branch": "main",
+    "Tags": [
+      "provider/v0.1.0-alpha.12"
+    ],
+    "Commit": "f017ffa2b6559127e17a0fc1c82bd0363b7da792",
+    "CommitMsg": "infra: FC 注入 ADMIN_TOKEN（运维端点保护，org secret）",
+    "Author": "LiXiang050789 \u003c18477403142@163.com\u003e",
+    "Committer": "LiXiang050789 \u003c18477403142@163.com\u003e"
+  },
+  "Results": [
+    {
+      "Target": "src/provider/go.mod",
+      "Class": "lang-pkgs",
+      "Type": "gomod",
+      "Packages": [
+        {
+          "ID": "github.com/quanttide/qtcloud-auth",
+          "Name": "github.com/quanttide/qtcloud-auth",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/quanttide/qtcloud-auth",
+            "UID": "dc1d46d9fe053b32"
+          },
+          "Relationship": "root",
+          "DependsOn": [
+            "github.com/alibabacloud-go/dysmsapi-20170525@v1.1.2",
+            "github.com/alibabacloud-go/tea-rpc@v1.1.3",
+            "github.com/alibabacloud-go/tea@v1.5.3",
+            "github.com/go-oauth2/oauth2/v4@v4.5.4",
+            "github.com/golang-jwt/jwt/v5@v5.3.0",
+            "github.com/google/uuid@v1.6.0",
+            "golang.org/x/crypto@v0.54.0",
+            "gorm.io/driver/postgres@v1.6.2",
+            "gorm.io/driver/sqlite@v1.6.0",
+            "gorm.io/gorm@v1.31.2",
+            "github.com/alibabacloud-go/debug@v1.0.1",
+            "github.com/alibabacloud-go/endpoint-util@v1.1.0",
+            "github.com/alibabacloud-go/tea-rpc-utils@v1.1.0",
+            "github.com/alibabacloud-go/tea-utils@v1.4.3",
+            "github.com/aliyun/credentials-go@v1.4.5",
+            "github.com/json-iterator/go@v1.1.12",
+            "github.com/modern-go/concurrent@v0.0.0-20180306012644-bacd9c7ef1dd",
+            "github.com/modern-go/reflect2@v1.0.2",
+            "github.com/tidwall/tinyqueue@v0.0.0-20180302190814-1e39f5511563",
+            "gopkg.in/ini.v1@v1.67.0"
+          ],
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/alibabacloud-go/dysmsapi-20170525@v1.1.2",
+          "Name": "github.com/alibabacloud-go/dysmsapi-20170525",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/alibabacloud-go/dysmsapi-20170525@v1.1.2",
+            "UID": "5726054d6aa0e2d8"
+          },
+          "Version": "v1.1.2",
+          "Relationship": "direct",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/alibabacloud-go/tea@v1.5.3",
+          "Name": "github.com/alibabacloud-go/tea",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/alibabacloud-go/tea@v1.5.3",
+            "UID": "fe5ecbbc540f4988"
+          },
+          "Version": "v1.5.3",
+          "Relationship": "direct",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/alibabacloud-go/tea-rpc@v1.1.3",
+          "Name": "github.com/alibabacloud-go/tea-rpc",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/alibabacloud-go/tea-rpc@v1.1.3",
+            "UID": "1c731254015615d2"
+          },
+          "Version": "v1.1.3",
+          "Relationship": "direct",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/go-oauth2/oauth2/v4@v4.5.4",
+          "Name": "github.com/go-oauth2/oauth2/v4",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/go-oauth2/oauth2/v4@v4.5.4",
+            "UID": "d81ce3752bb6c672"
+          },
+          "Version": "v4.5.4",
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "github.com/golang-jwt/jwt/v5@v5.3.0",
+            "github.com/google/uuid@v1.6.0",
+            "github.com/tidwall/buntdb@v1.1.2"
+          ],
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/golang-jwt/jwt/v5@v5.3.0",
+          "Name": "github.com/golang-jwt/jwt/v5",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/golang-jwt/jwt/v5@v5.3.0",
+            "UID": "3a1e9de617498086"
+          },
+          "Version": "v5.3.0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/google/uuid@v1.6.0",
+          "Name": "github.com/google/uuid",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/google/uuid@v1.6.0",
+            "UID": "ee14344f0060c251"
+          },
+          "Version": "v1.6.0",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Relationship": "direct",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "golang.org/x/crypto@v0.54.0",
+          "Name": "golang.org/x/crypto",
+          "Identifier": {
+            "PURL": "pkg:golang/golang.org/x/crypto@v0.54.0",
+            "UID": "5660b31904a6e345"
+          },
+          "Version": "v0.54.0",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "golang.org/x/net@v0.56.0",
+            "golang.org/x/sys@v0.47.0"
+          ],
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "gorm.io/driver/postgres@v1.6.2",
+          "Name": "gorm.io/driver/postgres",
+          "Identifier": {
+            "PURL": "pkg:golang/gorm.io/driver/postgres@v1.6.2",
+            "UID": "137b54b0855e0960"
+          },
+          "Version": "v1.6.2",
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "github.com/jackc/pgx/v5@v5.10.0",
+            "gorm.io/gorm@v1.31.2"
+          ],
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "gorm.io/driver/sqlite@v1.6.0",
+          "Name": "gorm.io/driver/sqlite",
+          "Identifier": {
+            "PURL": "pkg:golang/gorm.io/driver/sqlite@v1.6.0",
+            "UID": "bb4556af63aeda8a"
+          },
+          "Version": "v1.6.0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "github.com/mattn/go-sqlite3@v1.14.22",
+            "gorm.io/gorm@v1.31.2"
+          ],
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "gorm.io/gorm@v1.31.2",
+          "Name": "gorm.io/gorm",
+          "Identifier": {
+            "PURL": "pkg:golang/gorm.io/gorm@v1.31.2",
+            "UID": "be5297e478ab041b"
+          },
+          "Version": "v1.31.2",
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "github.com/jinzhu/inflection@v1.0.0",
+            "github.com/jinzhu/now@v1.1.5",
+            "golang.org/x/text@v0.40.0"
+          ],
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/alibabacloud-go/debug@v1.0.1",
+          "Name": "github.com/alibabacloud-go/debug",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/alibabacloud-go/debug@v1.0.1",
+            "UID": "40a15ed4db37494d"
+          },
+          "Version": "v1.0.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/alibabacloud-go/endpoint-util@v1.1.0",
+          "Name": "github.com/alibabacloud-go/endpoint-util",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/alibabacloud-go/endpoint-util@v1.1.0",
+            "UID": "992ffc916f254269"
+          },
+          "Version": "v1.1.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/alibabacloud-go/tea-rpc-utils@v1.1.0",
+          "Name": "github.com/alibabacloud-go/tea-rpc-utils",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/alibabacloud-go/tea-rpc-utils@v1.1.0",
+            "UID": "9d4af16a0f06a13"
+          },
+          "Version": "v1.1.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/alibabacloud-go/tea-utils@v1.4.3",
+          "Name": "github.com/alibabacloud-go/tea-utils",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/alibabacloud-go/tea-utils@v1.4.3",
+            "UID": "c5ffc78e864c9f93"
+          },
+          "Version": "v1.4.3",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/aliyun/credentials-go@v1.4.5",
+          "Name": "github.com/aliyun/credentials-go",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/aliyun/credentials-go@v1.4.5",
+            "UID": "94e4abd6c546b2a2"
+          },
+          "Version": "v1.4.5",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/jackc/pgpassfile@v1.0.0",
+          "Name": "github.com/jackc/pgpassfile",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/jackc/pgpassfile@v1.0.0",
+            "UID": "9139303b64656670"
+          },
+          "Version": "v1.0.0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/jackc/pgservicefile@v0.0.0-20240606120523-5a60cdf6a761",
+          "Name": "github.com/jackc/pgservicefile",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/jackc/pgservicefile@v0.0.0-20240606120523-5a60cdf6a761",
+            "UID": "4c85b356ff9e90e8"
+          },
+          "Version": "v0.0.0-20240606120523-5a60cdf6a761",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/jackc/pgx/v5@v5.10.0",
+          "Name": "github.com/jackc/pgx/v5",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/jackc/pgx/v5@v5.10.0",
+            "UID": "6ba1dc76fb4ffbbf"
+          },
+          "Version": "v5.10.0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "github.com/jackc/pgpassfile@v1.0.0",
+            "github.com/jackc/pgservicefile@v0.0.0-20240606120523-5a60cdf6a761",
+            "github.com/jackc/puddle/v2@v2.2.2",
+            "golang.org/x/sync@v0.22.0",
+            "golang.org/x/text@v0.40.0"
+          ],
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/jackc/puddle/v2@v2.2.2",
+          "Name": "github.com/jackc/puddle/v2",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/jackc/puddle/v2@v2.2.2",
+            "UID": "9836299bfd37d837"
+          },
+          "Version": "v2.2.2",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "golang.org/x/sync@v0.22.0"
+          ],
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/jinzhu/inflection@v1.0.0",
+          "Name": "github.com/jinzhu/inflection",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/jinzhu/inflection@v1.0.0",
+            "UID": "21ab6a74dc628232"
+          },
+          "Version": "v1.0.0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/jinzhu/now@v1.1.5",
+          "Name": "github.com/jinzhu/now",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/jinzhu/now@v1.1.5",
+            "UID": "ac043ce867d05857"
+          },
+          "Version": "v1.1.5",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/json-iterator/go@v1.1.12",
+          "Name": "github.com/json-iterator/go",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/json-iterator/go@v1.1.12",
+            "UID": "e37233730b771bf6"
+          },
+          "Version": "v1.1.12",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/mattn/go-sqlite3@v1.14.22",
+          "Name": "github.com/mattn/go-sqlite3",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/mattn/go-sqlite3@v1.14.22",
+            "UID": "5d53a01f7670a387"
+          },
+          "Version": "v1.14.22",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/modern-go/concurrent@v0.0.0-20180306012644-bacd9c7ef1dd",
+          "Name": "github.com/modern-go/concurrent",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/modern-go/concurrent@v0.0.0-20180306012644-bacd9c7ef1dd",
+            "UID": "a4bbf5b2d6c09504"
+          },
+          "Version": "v0.0.0-20180306012644-bacd9c7ef1dd",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/modern-go/reflect2@v1.0.2",
+          "Name": "github.com/modern-go/reflect2",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/modern-go/reflect2@v1.0.2",
+            "UID": "83c516d14751c7a"
+          },
+          "Version": "v1.0.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/tidwall/btree@v0.0.0-20191029221954-400434d76274",
+          "Name": "github.com/tidwall/btree",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/tidwall/btree@v0.0.0-20191029221954-400434d76274",
+            "UID": "24f741a08daf7b4f"
+          },
+          "Version": "v0.0.0-20191029221954-400434d76274",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/tidwall/buntdb@v1.1.2",
+          "Name": "github.com/tidwall/buntdb",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/tidwall/buntdb@v1.1.2",
+            "UID": "a815e83a7f3bdcdb"
+          },
+          "Version": "v1.1.2",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "github.com/tidwall/btree@v0.0.0-20191029221954-400434d76274",
+            "github.com/tidwall/gjson@v1.12.1",
+            "github.com/tidwall/grect@v0.0.0-20161006141115-ba9a043346eb",
+            "github.com/tidwall/match@v1.1.1",
+            "github.com/tidwall/rtree@v0.0.0-20180113144539-6cd427091e0e"
+          ],
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/tidwall/gjson@v1.12.1",
+          "Name": "github.com/tidwall/gjson",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/tidwall/gjson@v1.12.1",
+            "UID": "5026edc47d2ec8cf"
+          },
+          "Version": "v1.12.1",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "github.com/tidwall/match@v1.1.1",
+            "github.com/tidwall/pretty@v1.2.0"
+          ],
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/tidwall/grect@v0.0.0-20161006141115-ba9a043346eb",
+          "Name": "github.com/tidwall/grect",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/tidwall/grect@v0.0.0-20161006141115-ba9a043346eb",
+            "UID": "85ac7e672b85f946"
+          },
+          "Version": "v0.0.0-20161006141115-ba9a043346eb",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/tidwall/match@v1.1.1",
+          "Name": "github.com/tidwall/match",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/tidwall/match@v1.1.1",
+            "UID": "f14c08668819e7a6"
+          },
+          "Version": "v1.1.1",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/tidwall/pretty@v1.2.0",
+          "Name": "github.com/tidwall/pretty",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/tidwall/pretty@v1.2.0",
+            "UID": "c146e23d5fa89da7"
+          },
+          "Version": "v1.2.0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/tidwall/rtree@v0.0.0-20180113144539-6cd427091e0e",
+          "Name": "github.com/tidwall/rtree",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/tidwall/rtree@v0.0.0-20180113144539-6cd427091e0e",
+            "UID": "497ed1eaa6914ed1"
+          },
+          "Version": "v0.0.0-20180113144539-6cd427091e0e",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/tidwall/tinyqueue@v0.0.0-20180302190814-1e39f5511563",
+          "Name": "github.com/tidwall/tinyqueue",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/tidwall/tinyqueue@v0.0.0-20180302190814-1e39f5511563",
+            "UID": "e111fb57fc2cb610"
+          },
+          "Version": "v0.0.0-20180302190814-1e39f5511563",
+          "Licenses": [
+            "ISC"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "golang.org/x/net@v0.56.0",
+          "Name": "golang.org/x/net",
+          "Identifier": {
+            "PURL": "pkg:golang/golang.org/x/net@v0.56.0",
+            "UID": "23428243082dbbb5"
+          },
+          "Version": "v0.56.0",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "golang.org/x/crypto@v0.54.0",
+            "golang.org/x/sys@v0.47.0",
+            "golang.org/x/text@v0.40.0"
+          ],
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "golang.org/x/sync@v0.22.0",
+          "Name": "golang.org/x/sync",
+          "Identifier": {
+            "PURL": "pkg:golang/golang.org/x/sync@v0.22.0",
+            "UID": "80eda8b106b3f4a8"
+          },
+          "Version": "v0.22.0",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "golang.org/x/sys@v0.47.0",
+          "Name": "golang.org/x/sys",
+          "Identifier": {
+            "PURL": "pkg:golang/golang.org/x/sys@v0.47.0",
+            "UID": "84ebaa480e201444"
+          },
+          "Version": "v0.47.0",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "golang.org/x/text@v0.40.0",
+          "Name": "golang.org/x/text",
+          "Identifier": {
+            "PURL": "pkg:golang/golang.org/x/text@v0.40.0",
+            "UID": "227418a6ccfa6654"
+          },
+          "Version": "v0.40.0",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "gopkg.in/ini.v1@v1.67.0",
+          "Name": "gopkg.in/ini.v1",
+          "Identifier": {
+            "PURL": "pkg:golang/gopkg.in/ini.v1@v1.67.0",
+            "UID": "d7e31e301c0a3ff5"
+          },
+          "Version": "v1.67.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "gomod"
+        }
+      ]
+    },
+    {
+      "Target": "uv.lock",
+      "Class": "lang-pkgs",
+      "Type": "uv",
+      "Packages": [
+        {
+          "ID": "qtcloud-auth-tests@0.0.1",
+          "Name": "qtcloud-auth-tests",
+          "Identifier": {
+            "PURL": "pkg:pypi/qtcloud-auth-tests@0.0.1",
+            "UID": "ca2427c9ac39ca1a"
+          },
+          "Version": "0.0.1",
+          "Relationship": "root",
+          "AnalyzedBy": "uv"
+        }
+      ]
+    },
+    {
+      "Target": "manifests/terraform",
+      "Class": "config",
+      "Type": "terraform",
+      "MisconfSummary": {
+        "Successes": 51,
+        "Failures": 0
+      }
+    },
+    {
+      "Target": "src/provider/Dockerfile",
+      "Class": "config",
+      "Type": "dockerfile",
+      "MisconfSummary": {
+        "Successes": 26,
+        "Failures": 1
+      },
+      "Misconfigurations": [
+        {
+          "Type": "Dockerfile Security Check",
+          "ID": "DS-0026",
+          "Title": "No HEALTHCHECK defined",
+          "Description": "You should add HEALTHCHECK instruction in your docker container images to perform the health check on running containers.",
+          "Message": "Add HEALTHCHECK instruction in your Dockerfile",
+          "Namespace": "builtin.dockerfile.DS026",
+          "Query": "data.builtin.dockerfile.DS026.deny",
+          "Resolution": "Add HEALTHCHECK instruction in Dockerfile",
+          "Severity": "LOW",
+          "PrimaryURL": "https://avd.aquasec.com/misconfig/ds-0026",
+          "References": [
+            "https://blog.aquasec.com/docker-security-best-practices",
+            "https://avd.aquasec.com/misconfig/ds-0026"
+          ],
+          "Status": "FAIL",
+          "CauseMetadata": {
+            "Provider": "Dockerfile",
+            "Service": "general"
+          }
+        }
+      ]
+    }
+  ]
+}

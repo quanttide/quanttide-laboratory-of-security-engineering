@@ -1,0 +1,108 @@
+{
+	"Golang errors": {},
+	"Issues": [
+		{
+			"severity": "HIGH",
+			"confidence": "MEDIUM",
+			"cwe": {
+				"id": "190",
+				"url": "https://cwe.mitre.org/data/definitions/190.html"
+			},
+			"rule_id": "G115",
+			"details": "integer overflow conversion int -\u003e uint32",
+			"file": "/home/iguo/repos/quanttide/domains/quanttide-auth/apps/qtcloud-auth/src/provider/internal/api/password.go",
+			"code": "61: \t}\n62: \tgot := argon2.IDKey([]byte(password), salt, t, m, p, uint32(len(want)))\n63: \treturn subtle.ConstantTimeCompare(got, want) == 1\n",
+			"line": "62",
+			"column": "61",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "MEDIUM",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "676",
+				"url": "https://cwe.mitre.org/data/definitions/676.html"
+			},
+			"rule_id": "G114",
+			"details": "Use of net/http serve function that has no support for setting timeouts",
+			"file": "/home/iguo/repos/quanttide/domains/quanttide-auth/apps/qtcloud-auth/src/provider/cmd/server/main.go",
+			"code": "77: \tslog.Info(\"starting server\", \"addr\", addr)\n78: \tif err := http.ListenAndServe(addr, mux); err != nil {\n79: \t\tslog.Error(\"server error\", \"error\", err)\n",
+			"line": "78",
+			"column": "12",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "LOW",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "703",
+				"url": "https://cwe.mitre.org/data/definitions/703.html"
+			},
+			"rule_id": "G104",
+			"details": "Errors unhandled",
+			"file": "/home/iguo/repos/quanttide/domains/quanttide-auth/apps/qtcloud-auth/src/provider/internal/api/response.go",
+			"code": "38: \tw.WriteHeader(status)\n39: \tjson.NewEncoder(w).Encode(v)\n40: }\n",
+			"line": "39",
+			"column": "2",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "LOW",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "703",
+				"url": "https://cwe.mitre.org/data/definitions/703.html"
+			},
+			"rule_id": "G104",
+			"details": "Errors unhandled",
+			"file": "/home/iguo/repos/quanttide/domains/quanttide-auth/apps/qtcloud-auth/src/provider/internal/api/response.go",
+			"code": "32: \tw.WriteHeader(status)\n33: \tjson.NewEncoder(w).Encode(OAuthErrorResponse{Error: errCode, Description: description})\n34: }\n",
+			"line": "33",
+			"column": "2",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "LOW",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "703",
+				"url": "https://cwe.mitre.org/data/definitions/703.html"
+			},
+			"rule_id": "G104",
+			"details": "Errors unhandled",
+			"file": "/home/iguo/repos/quanttide/domains/quanttide-auth/apps/qtcloud-auth/src/provider/internal/api/response.go",
+			"code": "25: \tw.WriteHeader(status)\n26: \tjson.NewEncoder(w).Encode(ErrorResponse{Error: ErrorDetail{Code: code, Message: message}})\n27: }\n",
+			"line": "26",
+			"column": "2",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "LOW",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "703",
+				"url": "https://cwe.mitre.org/data/definitions/703.html"
+			},
+			"rule_id": "G104",
+			"details": "Errors unhandled",
+			"file": "/home/iguo/repos/quanttide/domains/quanttide-auth/apps/qtcloud-auth/src/provider/internal/api/oauth.go",
+			"code": "88: \tcase \"password\", \"refresh_token\":\n89: \t\th.oauthSrv.HandleTokenRequest(w, r)\n90: \n",
+			"line": "89",
+			"column": "3",
+			"nosec": false,
+			"suppressions": null
+		}
+	],
+	"Stats": {
+		"files": 15,
+		"lines": 1393,
+		"nosec": 0,
+		"found": 6
+	},
+	"GosecVersion": "dev"
+}
