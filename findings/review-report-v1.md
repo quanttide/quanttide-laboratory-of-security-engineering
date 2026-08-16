@@ -58,7 +58,7 @@
 
 ## 5. 后续建议（对对象仓库 & 实验室）
 
-1. **对象仓库（qtcloud-secret）**：15 条发现已提为 GitHub issues（`#1`–`#15`，标签 `poc-001` + `security:*`，https://github.com/quanttide/qtcloud-secret/issues）。按 P0（jwt 升级、Go 工具链固定 digest）→ P1（授权模型、限流、审计、no-store、.gocache 清理）→ P2 顺序整改；issue 关闭即台账状态机「复测中 → 已关闭」的触发点；
+1. **对象仓库（qtcloud-secret）**：15 条发现已提为 GitHub issues（`#1`–`#15`，标签 `poc-001` + `security:*`，https://github.com/quanttide/qtcloud-secret/issues），处理人已分配 **@LiXiang050789**。按 P0（jwt 升级、Go 工具链固定 digest）→ P1（授权模型、限流、审计、no-store、.gocache 清理）→ P2 顺序整改；issue 关闭即台账状态机「复测中 → 已关闭」的触发点；
 2. **实验室**：① 本套扫描矩阵固化为 `scans/run-all.sh` 一键脚本；② 季度巡检机制（对齐 Go 版本演进）；③ semgrep 补跑；④ 下一个 PoC 对象建议 qtcloud-auth（身份面）或 qtcloud-devops（供应链面）；
 3. **安全云**：台账/报告模板、扫描矩阵、评级流程直接作为「漏洞管理」「安全审计」两个首发能力域的 MVP 输入。
 
